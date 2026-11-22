@@ -1,0 +1,23 @@
+{
+  "ORL_images": 400,
+  "G_shape": [
+    92,
+    92
+  ],
+  "train_samples": 200,
+  "test_samples": 200,
+  "sign_seed": 2026,
+  "null_trials": 100,
+  "train_first_per_subject": 5,
+  "test_remaining_per_subject": 5,
+  "upper": {
+    "rank": 3,
+    "correct": 180,
+    "accuracy": 0.9
+  },
+  "pairwise": {
+    "rank": 4,
+    "correct": 183,
+    "accuracy": 0.915
+  }
+}

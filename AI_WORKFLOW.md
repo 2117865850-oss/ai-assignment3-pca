@@ -1,0 +1,10 @@
+# How the project was made
+
+The user asked an AI agent to complete AI Assignment 3. The assignment specified a recent PCA or LDA method for computer vision or pattern recognition. The agent worked from the brief, wrote the code and report, ran the experiment and prepared the public project.
+
+1. **Find a recent method.** The primary agent searched for recent two-dimensional PCA and LDA image-recognition papers. The research agent was asked to identify a primary publication with enough numerical detail for an independent implementation. The shortlist included Wang et al.'s 2025 robust sparse smooth PCA and Li and Kuang's signflip approach. The latter fit a question that can be tested with a common classifier: how many image directions should be retained?
+2. **Check the definition in code.** The research agent checked Algorithm 1 against the ORL notebook distributed in the journal supplement. It confirmed that the sign changes apply to the image covariance matrix, independently at every entry. Because a null matrix may be nonsymmetric, the notebook computes its general eigenvalues, orders them, and stores their real parts. The supplemental code uses the 0.95 quantile. The project implements these details in new Python code.
+3. **Freeze the comparison.** Before obtaining scores, the experiment agent specified three training samples, one fixed evaluation sample, 100 signflip trials, and the two signflip rules, two explained-variance baselines, and raw pixels. All methods use the same examples and classifier within each run.
+4. **Run, check and report.** The experiment agent ran the comparisons and saved per-image predictions. The primary agent checked the reported counts against the prediction records and inspected the generated Word and PDF report.
+
+Primary sources: [Li and Kuang, Journal of Data Science](https://doi.org/10.6339/24-JDS1158), [journal supplement](https://jds-online.org/journal/JDS/article/1397/info), [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist), [Wang et al., PLOS ONE](https://doi.org/10.1371/journal.pone.0323281).
